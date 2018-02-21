@@ -116,4 +116,20 @@ public class DrawDemo
             pen.turn(-72);
         }
     }
+
+    /**
+     * Dibuja un poligono de color rojo con el numero de lados indicado por
+     * parametro.
+     * @param n El numero de lados del poligono.
+     */
+    public void drawPolygon(int n)
+    {
+        Pen pen = new Pen(200, 250, myCanvas);
+        pen.setColor(Color.RED);
+
+        for (int i=0; i<n; i++) {
+            pen.move(30);
+            pen.turn(-360/n);
+        }
+    }
 }
